@@ -1,3 +1,5 @@
 .*
 Makefile
 *.o
+login
+ui_login.h
