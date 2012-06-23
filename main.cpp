@@ -1,5 +1,8 @@
 #include <QApplication>
 #include <QLabel>
+#include <QTextCodec>
+#include <QTranslator>
+#include <iostream>
 #include "login.h"
 #include "login2.h"
 #include "ui_login.h"
@@ -39,8 +42,17 @@ int test3(int argc, char *argv[])
 
 int main(int argc, char *argv[])
 {
-	/* return test1(argc, argv); */
-	/* return test2(argc, argv); */
-	return test3(argc, argv);
+	QApplication app(argc, argv);
+	QTranslator translator;
+	QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
+	QString locale = QLocale::system().name();
+
+
+	translator.load(QString("login_") + locale);
+	app.installTranslator(&translator);
+
+	LoginDialog dl;
+	dl.show();
+	return app.exec();
 }
 
