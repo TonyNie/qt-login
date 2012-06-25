@@ -8,3 +8,9 @@ LoginDialog::LoginDialog()
 LoginDialog::~LoginDialog()
 {
 }
+
+void LoginDialog::closeEvent(QCloseEvent * event)
+{
+	event->ignore();
+	return;
+}
