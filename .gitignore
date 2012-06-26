@@ -4,3 +4,4 @@ Makefile
 login
 ui_login.h
 *.qm
+moc_*.cpp

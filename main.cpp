@@ -4,21 +4,9 @@
 #include <QTranslator>
 #include <iostream>
 #include "login.h"
-#include "login2.h"
-#include "ui_login.h"
+/* #include "ui_login.h" */
 
 
-int test1(int argc, char *argv[])
-{
-	QApplication app(argc, argv);
-	QDialog dl; 
-	Ui::loginDialog ui; 
-
-	ui.setupUi(&dl);
-	dl.show();
-
-	return app.exec();
-}
 
 int test2(int argc, char *argv[])
 {
@@ -30,15 +18,6 @@ int test2(int argc, char *argv[])
 
 }
 
-int test3(int argc, char *argv[])
-{
-	QApplication app(argc, argv);
-	Login2Dialog dl;
-
-	dl.show();
-
-	return app.exec();
-}
 
 int main(int argc, char *argv[])
 {
@@ -52,6 +31,7 @@ int main(int argc, char *argv[])
 	app.installTranslator(&translator);
 
 	LoginDialog dl;
+	/* emit dl.valueChanged(2); */
 	dl.show();
 	return app.exec();
 }
