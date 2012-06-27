@@ -5,3 +5,15 @@ login
 ui_login.h
 *.qm
 moc_*.cpp
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
