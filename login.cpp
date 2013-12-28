@@ -34,3 +34,6 @@ void LoginDialog::showPasswd()
 	QString passwd = Ui::loginDialog::passwdLineEdit->text();
 	Ui::loginDialog::resultTextBrowser->setText(passwd);
 }
+
+
+
